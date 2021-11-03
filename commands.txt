@@ -1,0 +1,47 @@
+1. python3 manage.py makemigrations
+2. python3 manage.py migrate
+3. python3 manage.py shell
+4. from BikeRentalApp.models import Bike, Renter, Rental 
+5. ## creating the instances of Bike Model##
+
+6. bike_one = Bike(bike_type = "EL", color = "Blue")
+7. bike_one.save()
+
+7. bike_two = Bike(bike_type = "EL", color = "Black")
+8. bike_two.save()
+
+9. bike_three = Bike(bike_type = "ST", color = "Red")
+10. bike_three.save()
+
+11. bike_four = Bike(bike_type = "ST", color = "Yellow")
+12. bike_four.save()
+
+13. bike_five = Bike(bike_type = "TA", color = "Gray")
+14. bike_five.save()
+15 ## creating the instances of Renter Model##
+
+16. renter_one = Renter(first_name = "Kwasi", last_name = "Tuffour", phone = "054-436-3809", vip_num = 1)
+17. renter_one.save()
+
+18. renter_two = Renter(first_name = "Kwame", last_name = "Boateng", phone = "024-484-0660", vip_num = 2)
+19. renter_two.save()
+
+20. renter_three = Renter(first_name = "Eunice", last_name = "Boateng", phone = "055-846-1780", vip_num = 3)
+21. renter_three.save()
+
+22. ### creating the instances of Rental Model ###
+23. first_bike = Bike.objects.first()
+24. first_bike
+Outputs <Bike: EL-Blue>
+25. first_renter = Renter.objects.firs()
+26. first_renter
+Outputs <Kwasi Tuffour -#054-496-9809 >
+27. rental_one = Rental(bike=first_bike, renter=first_renter)
+28. rental_one.save()
+29. rental_one
+Outputs <Rental: Rental object (1)>
+
+
+### You can go ahead and try with both the filter method and exclude method ###
+
+
